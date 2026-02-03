@@ -1,147 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyKaty</title>
-    <link rel="icon" type="image/x-icon" href="thefavicon.png">
-    <style>
-        body {
-            font-family: "Courier New", Courier, monospace;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #00ff00;
-        }
-        header {
-            background-color: #000;
-            color: #00ff00;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #00ff00;
-            text-shadow: 0 0 5px #00ff00;
-        }
-        header h1 {
-            margin: 0;
-        }
-        main {
-            padding: 20px;
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #000;
-            border: 2px solid #00ff00;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00ff00;
-        }
-        h3 {
-            color: #00ff00;
-            text-shadow: 0 0 5px #00ff00;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #00ff00;
-            font-weight: bold;
-            text-shadow: 0 0 5px #00ff00;
-            transition: color 0.3s, text-shadow 0.3s;
-            cursor: pointer;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #0f0;
-            text-shadow: 0 0 10px #00ff00;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyKaty</title>
+<link rel="icon" type="image/x-icon" href="thefavicon.png">
+
+<style>
+body {
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #00ff00;
+}
+header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ff00;
+}
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    margin: 10px 0;
+}
+a {
+    color: #00ff00;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Games Tree</h1>
+</header>
+
+<main>
+<ul id="games">
+<li><a data-game="2048/">2048</a></li>
+<li><a data-game="bitlife/">Bitlife</a></li>
+<li><a data-game="retro bowl/">RetroBowl</a></li>
+<li><a data-game="subwaysurfers/">SubwaySurfers</a></li>
+<li><a data-game="tinyfishing/">Tinyfishing</a></li>
+<li><a data-game="ageOfWar1/">AgeOfWar1</a></li>
+<li><a data-game="AgeOfWar2/">AgeOfWar2</a></li>
+<li><a data-game="Bloxorz/">Bloxorz</a></li>
+<li><a data-game="Casuality/">Casuality</a></li>
+<li><a data-game="donkeyKong/">DonkeyKong</a></li>
+<li><a data-game="FlappyBird/">FlappyBird</a></li>
+<li><a data-game="Glean/">Glean</a></li>
+<li><a data-game="Glean2/">Glean2</a></li>
+<li><a data-game="Learn 2 fly/">Learn 2 fly</a></li>
+<li><a data-game="Learn2Fly3/">Learn2Fly3</a></li>
+<li><a data-game="mario/">Mario</a></li>
+<li><a data-game="Pacman/">Pacman</a></li>
+<li><a data-game="PapasBurgeria/">PapasBurgeria</a></li>
+<li><a data-game="simpsonSaveSpringfield/">Simpson</a></li>
+<li><a data-game="superMario2/">SuperMario2</a></li>
+<li><a data-game="TakeToTheStreets/">TakeToTheStreets</a></li>
+<li><a data-game="baldisbasics/">BaldisBasics</a></li>
+<li><a data-game="boxhead/">Boxhead</a></li>
+<li><a data-game="interactive_buddy/">Interactive Buddy</a></li>
+<li><a data-game="mc_donalds_videogame/">McDonalds</a></li>
+<li><a data-game="minecraft-tower-defence-2/">Minecraft TD2</a></li>
+<li><a data-game="smb_crossover/">SMB Crossover</a></li>
+<li><a data-game="thing_thing_arena/">Thing Thing</a></li>
+<li><a data-game="HappyWheels/">HappyWheels</a></li>
+<li><a data-game="Clash-Royale-Dupe/">Clash Royale</a></li>
+<li><a data-game="Angry-Birds-Rio/">Angry Birds Rio</a></li>
+<li><a data-game="angryBirdsSpace/">Angry Birds Space</a></li>
+<li><a data-game="Bad Piggies/">Bad Piggies</a></li>
+<li><a data-game="crossyroad/">Crossyroad</a></li>
+<li><a data-game="cuttherope/">Cut The Rope</a></li>
+<li><a data-game="fireboy-and-watergirl-forest-temple/">Fireboy</a></li>
+<li><a data-game="friendlyfire/">Friendlyfire</a></li>
+<li><a data-game="highwaytraffic/">Highway Traffic</a></li>
+<li><a data-game="Blackjack/">Blackjack</a></li>
+<li><a data-game="Slots/">Slots</a></li>
+</ul>
+</main>
+
+<script>
+document.querySelectorAll("#games a").forEach(link => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+
+        const url = link.dataset.game;
+        const win = window.open("", "_blank");
+
+        win.document.open();
+        win.document.write(`
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game</title>
+<style>
+html,body{margin:0;height:100%;background:black;}
+iframe{width:100%;height:100%;border:0;}
+</style>
 </head>
 <body>
-    <header>
-        <h1><b>Games Tree</b></h1>
-    </header>
-    <main>
-        <h3><b>A simple list of unblocked games I've compiled:</b></h3>
-        <ul>
-            <li><a onclick="openGame('2048/')">2048</a></li>
-            <li><a onclick="openGame('bitlife/')">Bitlife</a></li>
-            <li><a onclick="openGame('retro bowl/')">RetroBowl</a></li>
-            <li><a onclick="openGame('subwaysurfers/')">SubwaySurfers</a></li>
-            <li><a onclick="openGame('tinyfishing/')">Tinyfishing</a></li>
-            <li><a onclick="openGame('ageOfWar1/')">AgeOfWar1</a></li>
-            <li><a onclick="openGame('AgeOfWar2/')">AgeOfWar2</a></li>
-            <li><a onclick="openGame('Bloxorz/')">Bloxorz</a></li>
-            <li><a onclick="openGame('Casuality/')">Casuality</a></li>
-            <li><a onclick="openGame('donkeyKong/')">DonkeyKong</a></li>
-            <li><a onclick="openGame('FlappyBird/')">FlappyBird</a></li>
-            <li><a onclick="openGame('Glean/')">Glean</a></li>
-            <li><a onclick="openGame('Glean2/')">Glean2</a></li>
-            <li><a onclick="openGame('Learn 2 fly/')">Learn 2 fly</a></li>
-            <li><a onclick="openGame('Learn2Fly3/')">Learn2Fly3</a></li>
-            <li><a onclick="openGame('mario/')">mario</a></li>
-            <li><a onclick="openGame('Pacman/')">Pacman</a></li>
-            <li><a onclick="openGame('PapasBurgeria/')">PapasBurgeria</a></li>
-            <li><a onclick="openGame('simpsonSaveSpringfield/')">simpsonSaveSpringfield</a></li>
-            <li><a onclick="openGame('superMario2/')">superMario2</a></li>
-            <li><a onclick="openGame('TakeToTheStreets/')">TakeToTheStreets</a></li>
-            <li><a onclick="openGame('baldisbasics/')">BaldisBasics</a></li>
-            <li><a onclick="openGame('boxhead/')">Boxhead</a></li>
-            <li><a onclick="openGame('interactive_buddy/')">interactive_buddy</a></li>
-            <li><a onclick="openGame('mc_donalds_videogame/')">mc_donalds_videogame</a></li>
-            <li><a onclick="openGame('minecraft-tower-defence-2/')">minecraft-tower-defence-2</a></li>
-            <li><a onclick="openGame('smb_crossover/')">smb_crossover</a></li>
-            <li><a onclick="openGame('thing_thing_arena/')">thing_thing_arena</a></li>
-            <li><a onclick="openGame('HappyWheels/')">HappyWheels</a></li>
-            <li><a onclick="openGame('Clash-Royale-Dupe/')">Clash-Royale-Dupe</a></li>
-            <li><a onclick="openGame('Angry-Birds-Rio/')">Angry-Birds-Rio</a></li>
-            <li><a onclick="openGame('angryBirdsSpace/')">Angry-Birds-Space</a></li>
-            <li><a onclick="openGame('Bad Piggies/')">Bad Piggies</a></li>
-            <li><a onclick="openGame('crossyroad/')">crossyroad</a></li>
-            <li><a onclick="openGame('cuttherope/')">cuttherope</a></li>
-            <li><a onclick="openGame('fireboy-and-watergirl-forest-temple/')">fireboy-and-watergirl-forest-temple</a></li>
-            <li><a onclick="openGame('friendlyfire/')">friendlyfire</a></li>
-            <li><a onclick="openGame('highwaytraffic/')">highwaytraffic</a></li>
-            <li><a onclick="openGame('Blackjack/')">Blackjack</a></li>
-            <li><a onclick="openGame('Slots/')">Slots</a></li>
-        </ul>
-    </main>
+<iframe src="${url}" allowfullscreen></iframe>
+</body>
+</html>
+        `);
+        win.document.close();
+    });
+});
+</script>
 
-    <script>
-        function openGame(url) {
-            const win = window.open("about:blank", "_blank");
-            if (!win) return;
-
-            win.document.write(`
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <title>Game</title>
-                    <style>
-                        html, body {
-                            margin: 0;
-                            padding: 0;
-                            width: 100%;
-                            height: 100%;
-                            background: black;
-                        }
-                        iframe {
-                            border: none;
-                            width: 100%;
-                            height: 100%;
-                        }
-                    </style>
-                </head>
-                <body>
-                    <iframe src="${url}" allowfullscreen></iframe>
-                </body>
-                </html>
-            `);
-
-            win.document.close();
-        }
-    </script>
 </body>
 </html>
