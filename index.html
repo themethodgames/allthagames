@@ -50,6 +50,7 @@
             font-weight: bold;
             text-shadow: 0 0 5px #00ff00;
             transition: color 0.3s, text-shadow 0.3s;
+            cursor: pointer;
         }
         a:hover {
             text-decoration: underline;
@@ -65,49 +66,82 @@
     <main>
         <h3><b>A simple list of unblocked games I've compiled:</b></h3>
         <ul>
-            <li><a href="2048/" target="_blank">2048</a></li>
-            <li><a href="bitlife/" target="_blank">Bitlife</a></li>
-            <li><a href="retro bowl/" target="_blank">RetroBowl</a></li>
-            <li><a href="subwaysurfers/" target="_blank">SubwaySurfers</a></li>
-            <li><a href="tinyfishing/" target="_blank">Tinyfishing</a></li>
-            <li><a href="ageOfWar1/" target="_blank">AgeOfWar1</a></li>
-            <li><a href="AgeOfWar2/" target="_blank">AgeOfWar2</a></li>
-            <li><a href="Bloxorz/" target="_blank">Bloxorz</a></li>
-            <li><a href="Casuality/" target="_blank">Casuality</a></li>
-            <li><a href="donkeyKong/" target="_blank">DonkeyKong</a></li>
-            <li><a href="FlappyBird/" target="_blank">FlappyBird</a></li>
-            <li><a href="Glean/" target="_blank">Glean</a></li>
-            <li><a href="Glean2/" target="_blank">Glean2</a></li>
-            <li><a href="Learn 2 fly/" target="_blank">Learn 2 fly</a></li>
-            <li><a href="Learn2Fly3/" target="_blank">Learn2Fly3</a></li>
-            <li><a href="mario/" target="_blank">mario</a></li>
-            <li><a href="Pacman/" target="_blank">Pacman</a></li>
-            <li><a href="PapasBurgeria/" target="_blank">PapasBurgeria</a></li>
-            <li><a href="simpsonSaveSpringfield/" target="_blank">simpsonSaveSpringfield</a></li>
-            <li><a href="superMario2/" target="_blank">superMario2</a></li>
-            <li><a href="TakeToTheStreets/" target="_blank">TakeToTheStreets</a></li>
-            <li><a href="baldisbasics/" target="_blank">BaldisBasics</a></li>
-            <li><a href="boxhead/" target="_blank">Boxhead</a></li>
-            <li><a href="interactive_buddy/" target="_blank">interactive_buddy</a></li>
-            <li><a href="mc_donalds_videogame/" target="_blank">mc_donalds_videogame</a></li>
-            <li><a href="minecraft-tower-defence-2/" target="_blank">minecraft-tower-defence-2</a></li>
-            <li><a href="smb_crossover/" target="_blank">smb_crossover</a></li>
-            <li><a href="thing_thing_arena/" target="_blank">thing_thing_arena</a></li>
-            <li><a href="HappyWheels/" target="_blank">HappyWheels</a></li>
-            <li><a href="Clash-Royale-Dupe/" target="_blank">Clash-Royale-Dupe</a></li>
-            <li><a href="Angry-Birds-Rio/" target="_blank">Angry-Birds-Rio</a></li>
-            <li><a href="angryBirdsSpace/" target="_blank">Angry-Birds-Space</a></li>
-            <li><a href="Bad Piggies/" target="_blank">Bad Piggies</a></li>
-            <li><a href="crossyroad/" target="_blank">crossyroad</a></li>
-            <li><a href="cuttherope/" target="_blank">cuttherope</a></li>
-            <li><a href="fireboy-and-watergirl-forest-temple/" target="_blank">fireboy-and-watergirl-forest-temple</a></li>
-            <li><a href="friendlyfire/" target="_blank">friendlyfire</a></li>
-            <li><a href="highwaytraffic/" target="_blank">highwaytraffic</a></li>
-            <li><a href="Blackjack/" target="_blank">Blackjack</a></li>
-            <li><a href="Slots/" target="_blank">Slots</a></li>
-
-
+            <li><a onclick="openGame('2048/')">2048</a></li>
+            <li><a onclick="openGame('bitlife/')">Bitlife</a></li>
+            <li><a onclick="openGame('retro bowl/')">RetroBowl</a></li>
+            <li><a onclick="openGame('subwaysurfers/')">SubwaySurfers</a></li>
+            <li><a onclick="openGame('tinyfishing/')">Tinyfishing</a></li>
+            <li><a onclick="openGame('ageOfWar1/')">AgeOfWar1</a></li>
+            <li><a onclick="openGame('AgeOfWar2/')">AgeOfWar2</a></li>
+            <li><a onclick="openGame('Bloxorz/')">Bloxorz</a></li>
+            <li><a onclick="openGame('Casuality/')">Casuality</a></li>
+            <li><a onclick="openGame('donkeyKong/')">DonkeyKong</a></li>
+            <li><a onclick="openGame('FlappyBird/')">FlappyBird</a></li>
+            <li><a onclick="openGame('Glean/')">Glean</a></li>
+            <li><a onclick="openGame('Glean2/')">Glean2</a></li>
+            <li><a onclick="openGame('Learn 2 fly/')">Learn 2 fly</a></li>
+            <li><a onclick="openGame('Learn2Fly3/')">Learn2Fly3</a></li>
+            <li><a onclick="openGame('mario/')">mario</a></li>
+            <li><a onclick="openGame('Pacman/')">Pacman</a></li>
+            <li><a onclick="openGame('PapasBurgeria/')">PapasBurgeria</a></li>
+            <li><a onclick="openGame('simpsonSaveSpringfield/')">simpsonSaveSpringfield</a></li>
+            <li><a onclick="openGame('superMario2/')">superMario2</a></li>
+            <li><a onclick="openGame('TakeToTheStreets/')">TakeToTheStreets</a></li>
+            <li><a onclick="openGame('baldisbasics/')">BaldisBasics</a></li>
+            <li><a onclick="openGame('boxhead/')">Boxhead</a></li>
+            <li><a onclick="openGame('interactive_buddy/')">interactive_buddy</a></li>
+            <li><a onclick="openGame('mc_donalds_videogame/')">mc_donalds_videogame</a></li>
+            <li><a onclick="openGame('minecraft-tower-defence-2/')">minecraft-tower-defence-2</a></li>
+            <li><a onclick="openGame('smb_crossover/')">smb_crossover</a></li>
+            <li><a onclick="openGame('thing_thing_arena/')">thing_thing_arena</a></li>
+            <li><a onclick="openGame('HappyWheels/')">HappyWheels</a></li>
+            <li><a onclick="openGame('Clash-Royale-Dupe/')">Clash-Royale-Dupe</a></li>
+            <li><a onclick="openGame('Angry-Birds-Rio/')">Angry-Birds-Rio</a></li>
+            <li><a onclick="openGame('angryBirdsSpace/')">Angry-Birds-Space</a></li>
+            <li><a onclick="openGame('Bad Piggies/')">Bad Piggies</a></li>
+            <li><a onclick="openGame('crossyroad/')">crossyroad</a></li>
+            <li><a onclick="openGame('cuttherope/')">cuttherope</a></li>
+            <li><a onclick="openGame('fireboy-and-watergirl-forest-temple/')">fireboy-and-watergirl-forest-temple</a></li>
+            <li><a onclick="openGame('friendlyfire/')">friendlyfire</a></li>
+            <li><a onclick="openGame('highwaytraffic/')">highwaytraffic</a></li>
+            <li><a onclick="openGame('Blackjack/')">Blackjack</a></li>
+            <li><a onclick="openGame('Slots/')">Slots</a></li>
         </ul>
     </main>
+
+    <script>
+        function openGame(url) {
+            const win = window.open("about:blank", "_blank");
+            if (!win) return;
+
+            win.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Game</title>
+                    <style>
+                        html, body {
+                            margin: 0;
+                            padding: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: black;
+                        }
+                        iframe {
+                            border: none;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <iframe src="${url}" allowfullscreen></iframe>
+                </body>
+                </html>
+            `);
+
+            win.document.close();
+        }
+    </script>
 </body>
 </html>
