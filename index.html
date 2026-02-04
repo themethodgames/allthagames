@@ -99,11 +99,11 @@ a:hover {
 <script>
 const pageTitle = document.title;
 const faviconHref = document.getElementById("siteFavicon").href;
-const PANIC_URL = "https://classroom.google.com";
+const PANIC_URL = "https://launchpad.classlink.com/katyisd";
 
 // Panic key on main page
 document.addEventListener("keydown", e => {
-    if (e.key === "\\") {
+    if (e.code === "Backslash") {
         window.location.href = PANIC_URL;
     }
 });
@@ -135,7 +135,7 @@ iframe{width:100%;height:100%;border:0;}
 
 <script>
 document.addEventListener("keydown", e => {
-    if (e.key === "\\\\") {
+    if (e.code === "Backslash") {
         window.location.href = "${PANIC_URL}";
     }
 });
